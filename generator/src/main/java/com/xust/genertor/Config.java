@@ -16,9 +16,9 @@ import java.util.Map;
 public class Config {
     public static void main(String[] args) {
         //表名
-        String table = "pms_brand";
+        String table = "pms_file";
         //模块名
-        String module = "product";
+        String module = "file";
         //取得父项目路径
         String parent_path = System.getProperty("user.dir");
         //配置entity路径
