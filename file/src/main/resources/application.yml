@@ -1,0 +1,13 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: myfile
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.36.33:8848
+minio:
+  url: http://192.168.36.33:9000
+  username: admin
+  password: 123456789

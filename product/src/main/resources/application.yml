@@ -1,0 +1,9 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: product
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://192.168.36.33:8848
