@@ -1,5 +1,6 @@
 package com.xust.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.xust.core.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -56,6 +57,7 @@ public class UmsAdmin extends BaseEntity {
     /**
      * 登录密码
      */
+    @JsonIgnore
     private String password;
 
     /**
