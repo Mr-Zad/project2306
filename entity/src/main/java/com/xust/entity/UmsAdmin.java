@@ -32,7 +32,13 @@ public class UmsAdmin extends BaseEntity {
         this.icon = icon;
     }
 
-
+    public UmsAdmin(String id, String name, String phone, String email, Integer gender) {
+        super(id);
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+        this.gender = gender;
+    }
 
     /**
      * 用户姓名

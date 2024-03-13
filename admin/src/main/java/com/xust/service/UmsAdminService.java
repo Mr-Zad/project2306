@@ -21,4 +21,8 @@ public interface UmsAdminService extends IService<UmsAdmin> {
     IPage<UmsAdmin> getUmsAdminPage(Integer pageNo, Integer pageSize,String name);
 
     Boolean save(String name, String phone, String email, Integer gender, String password, MultipartFile file);
+
+    Boolean update(String id,String name, String phone, String email, Integer gender,MultipartFile file);
+
+
 }

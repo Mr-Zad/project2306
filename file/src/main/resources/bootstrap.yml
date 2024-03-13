@@ -1,0 +1,15 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: myfile
+  profiles:
+    active: datasource,register,minio
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.36.33:8848
+        prefix: xust
+        file-extension: yml
+

@@ -53,4 +53,13 @@ public class UmsAdminServiceImpl extends ServiceImpl<UmsAdminMapper, UmsAdmin> i
         String icon = fileService.imageUpload(file);
         return this.save(new UmsAdmin(name,phone,email,gender,passwordEncoder.encode(password),icon));
     }
+
+    @Override
+    public Boolean update(String id, String name, String phone, String email, Integer gender, MultipartFile file) {
+        UmsAdmin umsAdmin = new UmsAdmin(id,name,phone,email,gender);
+        if (null != file){
+            umsAdmin.setIcon(fileService.imageUpload(file));
+        }
+        return this.updateById(umsAdmin);
+    }
 }

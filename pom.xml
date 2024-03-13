@@ -23,6 +23,7 @@
     <minio.version>8.5.2</minio.version>
     <okhttp.version>4.10.0</okhttp.version>
     <jnanoid.version>2.0.0</jnanoid.version>
+    <jackson.version>2.13.3</jackson.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -94,6 +95,13 @@
         <artifactId>jnanoid</artifactId>
         <version>${jnanoid.version}</version>
       </dependency>
+
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>${jackson.version}</version>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 

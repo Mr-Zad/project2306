@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -35,18 +34,28 @@ public class UmsAdminController {
    /* public List<UmsAdmin> list(){
         return umsAdminService.getUmsAdminList();
     }*/
-    public ResultJson<IPage<UmsAdmin>> getUmsAdminPage(Integer pageNo, Integer pageSize,String name) throws InterruptedException {
+    public ResultJson<IPage<UmsAdmin>> getUmsAdminPage(Integer pageNo, Integer pageSize, String name) throws InterruptedException {
 
         TimeUnit.MICROSECONDS.sleep(2000);
         //System.out.println(10/0);
-        return ResultJson.success(umsAdminService.getUmsAdminPage(pageNo,pageSize,name));
+        return ResultJson.success(umsAdminService.getUmsAdminPage(pageNo, pageSize, name));
 
     }
 
     @PostMapping("/save")
     public ResultJson<Boolean> save(String name, String phone, String email, Integer gender, String password, MultipartFile file) {
         //System.out.println();
-        return ResultJson.success(umsAdminService.save(name,phone,email,gender,password,file),"添加管理员成功");
+        return ResultJson.success(umsAdminService.save(name, phone, email, gender, password, file), "添加管理员成功");
     }
 
+    @GetMapping("/getById")
+    public ResultJson<UmsAdmin> getById(String id){
+        return ResultJson.success(umsAdminService.getById(id));
+    }
+
+    @PostMapping("/update")
+    public ResultJson<Boolean> update(String id,String name, String phone, String email, Integer gender, MultipartFile file){
+
+        return ResultJson.success(umsAdminService.update(id,name,phone,email,gender,file),"修改管理员成功");
+    }
 }

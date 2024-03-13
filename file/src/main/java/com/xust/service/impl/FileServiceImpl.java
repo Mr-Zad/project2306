@@ -1,6 +1,5 @@
 package com.xust.service.impl;
 
-import com.alibaba.nacos.common.util.Md5Utils;
 import com.aventrix.jnanoid.jnanoid.NanoIdUtils;
 import com.xust.entity.PmsFile;
 import com.xust.service.FileService;
