@@ -40,6 +40,11 @@ public class UmsAdmin extends BaseEntity {
         this.gender = gender;
     }
 
+    public UmsAdmin(String id, Boolean active) {
+        super(id);
+        this.active = active;
+    }
+
     /**
      * 用户姓名
      */

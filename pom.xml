@@ -11,6 +11,9 @@
     <module>entity</module>
     <module>generator</module>
     <module>file</module>
+      <module>mybatis-common</module>
+      <module>web-common</module>
+    <module>BackGateway</module>
   </modules>
 
   <properties>
@@ -24,6 +27,7 @@
     <okhttp.version>4.10.0</okhttp.version>
     <jnanoid.version>2.0.0</jnanoid.version>
     <jackson.version>2.13.3</jackson.version>
+    <common.version>1.0.0</common.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -102,6 +106,17 @@
         <version>${jackson.version}</version>
       </dependency>
 
+      <dependency>
+        <groupId>com.xust</groupId>
+        <artifactId>mybatis-common</artifactId>
+        <version>${common.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.xust</groupId>
+        <artifactId>web-common</artifactId>
+        <version>${common.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 

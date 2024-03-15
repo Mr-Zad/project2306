@@ -3,6 +3,7 @@ package com.xust.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.xust.entity.UmsAdmin;
 import com.xust.feign.FileService;
 import com.xust.mapper.UmsAdminMapper;
@@ -61,5 +62,10 @@ public class UmsAdminServiceImpl extends ServiceImpl<UmsAdminMapper, UmsAdmin> i
             umsAdmin.setIcon(fileService.imageUpload(file));
         }
         return this.updateById(umsAdmin);
+    }
+
+    @Override
+    public Boolean delete(String id, Boolean active) {
+        return this.updateById(new UmsAdmin(id,active));
     }
 }

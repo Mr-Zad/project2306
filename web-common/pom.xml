@@ -6,30 +6,26 @@
         <artifactId>project2306</artifactId>
         <version>1.0.0</version>
     </parent>
-    <artifactId>admin</artifactId>
+    <artifactId>web-common</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>com.xust</groupId>
-            <artifactId>web-common</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.xust</groupId>
-            <artifactId>mybatis-common</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.xust</groupId>
+            <artifactId>entity</artifactId>
+        </dependency>
     </dependencies>
 </project>

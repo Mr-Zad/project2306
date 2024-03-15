@@ -1,6 +1,7 @@
 package com.xust.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.xust.entity.UmsAdmin;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.web.multipart.MultipartFile;
@@ -25,4 +26,5 @@ public interface UmsAdminService extends IService<UmsAdmin> {
     Boolean update(String id,String name, String phone, String email, Integer gender,MultipartFile file);
 
 
+    Boolean delete(String id, Boolean active);
 }

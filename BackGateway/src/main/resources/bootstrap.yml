@@ -1,0 +1,36 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: backgateway
+  profiles:
+    active: register,backgateway
+
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+#      routes:
+#        - id: admin
+#          uri: lb://admin
+#          predicates:
+#            - Path=/umsAdmin/**
+#        - id: product
+#          uri: lb://product
+#          predicates:
+#            - Path=/pmsBrand/**
+#      globalcors:
+#        cors-configurations:
+#          '[/**]':
+#            allowedOrigins: "*"
+#            allowedMethods: "*"
+#            allowedHeaders: "*"
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.36.33:8848
+        prefix: xust
+        file-extension: yml

@@ -58,4 +58,10 @@ public class UmsAdminController {
 
         return ResultJson.success(umsAdminService.update(id,name,phone,email,gender,file),"修改管理员成功");
     }
+
+    @PostMapping("/delete")
+    public ResultJson<Boolean> delete(String id,Boolean active){
+
+        return ResultJson.success(umsAdminService.delete(id,active));
+    }
 }
