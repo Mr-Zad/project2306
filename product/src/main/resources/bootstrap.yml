@@ -1,0 +1,13 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: product
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.36.33:8848
+        prefix: xust
+        file-extension: yml
+  profiles:
+    active: register,datasource,openfeign
