@@ -11,3 +11,6 @@ spring:
         file-extension: yml
   profiles:
     active: register,datasource,openfeign
+  redis:
+    host: 192.168.36.33
+    port: 6379
