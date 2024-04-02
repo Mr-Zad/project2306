@@ -42,5 +42,17 @@ public class PmsAttr extends BaseEntity {
      */
     private Long sort;
 
+    //添加用
+    public PmsAttr(String name, String categoryId, Integer type) {
+        this.name = name;
+        this.categoryId = categoryId;
+        this.type = type;
+    }
+    //修改用
 
+
+    public PmsAttr(String name, Integer type) {
+        this.name = name;
+        this.type = type;
+    }
 }

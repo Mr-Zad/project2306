@@ -1,7 +1,10 @@
 package com.xust.service;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.xust.entity.PmsAttr;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface PmsAttrService extends IService<PmsAttr> {
 
+    List<PmsAttr> list(String[] categoryIds);
+    Boolean save(String name, String categoryId, Integer type);
+    Boolean update(String id,String name,Integer type);
+    Boolean delete(String id);
 }
